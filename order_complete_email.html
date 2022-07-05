@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jihwan Shopping Mall</title>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-WRZPQZV");
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+        body {
+            max-width: 1500px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px auto 0px auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:active {
+            color: black;
+        }
+
+        a:hover {
+            color: #aaaaaa;
+        }
+
+        .menu_text {
+            font-size: 20px;
+            margin: 10px;
+            color: black;
+        }
+
+        .menu_icon {
+            float: right;
+            margin: 7px;
+        }
+
+        .item_image {
+            width: 50%;
+        }
+
+        a {
+            font-size: 20px;
+            margin: 10px;
+            color: black;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .product_title {
+            font-size: 19px;
+        }
+
+        #purchase_button {
+            width: 100%;
+            padding: 20px;
+            background-color: darkblue;
+            color: white;
+            font-size: 22px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function (event) {
+            let product_id = window.location.href.split("item_id=")[1].substring(0, 1);
+            let order_no = window.location.href.split("order_no=")[1];
+            let image_urls = [
+                "",
+                "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_MY?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1632948891000",
+                "https://cf.shopee.com.my/file/bdbe3302367ef8e977fbe9b04934a197",
+                "https://www.notebookcheck.net/uploads/tx_nbc2/LD0005429249_2_02.jpg",
+                "https://m.media-amazon.com/images/I/51jxS+lbzvL._SX450_.jpg"
+            ];
+            let product_titles = [
+                "",
+                "맥북 (Macbook Pro with Touch bar)",
+                "갤럭시북 (Galaxy Book)",
+                "젠북 (Zenbook)",
+                "씽크패드 (Thinkpad)"
+            ];
+            let product_prices = [
+                "",
+                "1,856,000원",
+                "1,500,000원",
+                "1,250,000원",
+                "899,000원"
+            ];
+            document.getElementById("product_image").src = image_urls[product_id];
+            document.getElementById("product_title").innerHTML = product_titles[product_id];
+            document.getElementById("product_price").innerHTML = product_prices[product_id];
+            document.getElementById("total_price").innerHTML = product_prices[product_id];
+            document.getElementById("order_no").innerHTML = order_no;
+        });
+    </script>
+</head>
+
+<body>
+    <div style="position:absolute; right:10px; top: 30px;">
+        <a class="menu_icon" href="signup.html"><img
+                src="https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_1280.png" width="35"
+                height="35" /></a>
+        <a class="menu_icon" href="basket.html?item_id=1"><img
+                src="https://cdn.pixabay.com/photo/2014/05/21/13/25/shopping-cart-349544_1280.png" width="35"
+                height="35" /></a>
+    </div>
+    <a href="jihwan_shopping_mall.html">
+        <h1 style="text-align:center;">Jihwan&apos;s Mall</h1>
+    </a><br />
+
+    <div class="container-fluid" style="width:100%; text-align:center;">
+        <a class="menu_text" href="view_item_list.html">상품 보기</a>
+        <a class="menu_text" href="basket.html?item_id=1">장바구니</a>
+        <a class="menu_text" href="signup.html">회원가입</a>
+    </div><br /><br />
+    <hr /><br />
+
+    <div class="container-fluid" style="width:80%; margin: 0px auto 0px auto;">
+        <br />
+        <h1 style="text-align:center;">고객님의 주문이 완료되었습니다.</h1><br /><br /><br />
+
+        <table class="table" border="0" style="text-align:center;">
+            <tr>
+                <th colspan="2" width="40%">상품정보</th>
+                <th width="20%">수량</th>
+                <th width="20%">배송비</th>
+                <th width="20%">합계</th>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <hr />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="product_image" class="item_image" src="" />
+                </td>
+                <td>
+                    <h3 id="product_title"></h3>
+                </td>
+                <td>1</td>
+                <td>무료</td>
+                <td>
+                    <h3 id="product_price">1,856,000원</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <hr />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <h2>주문 번호: <span id="order_no"></span></h2>
+        <h2>총 결제 금액: <span id="total_price"></span></h2>
+        <h2 id="emailText">결제 영수증을 test1234@gmail.com로 보내드렸습니다.</h2>
+        <h2>배송비: 0원</h2>
+
+        <br /><br /><br />
+        <a href="jihwan_shopping_mall.html"><button id="purchase_button">계속 쇼핑하기</button></a>
+    </div>
+    <footer class="container-fluid"
+        style="margin-top:200px; width:100%; background-color: grey; padding-top: 30px; padding-bottom:30px; text-align:center; color:white;">
+        Jihwan&apos;s Mall &copy; Copyright 2022
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jihwan Shopping Mall</title>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-WRZPQZV");
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+        body {
+            max-width: 1500px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px auto 0px auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:active {
+            color: black;
+        }
+
+        a:hover {
+            color: #aaaaaa;
+        }
+
+        .menu_text {
+            font-size: 20px;
+            margin: 10px;
+            color: black;
+        }
+
+        .menu_icon {
+            float: right;
+            margin: 7px;
+        }
+
+        .item_image {
+            width: 100%;
+        }
+
+        a {
+            font-size: 20px;
+            margin: 10px;
+            color: black;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .product_title {
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position:absolute; right:10px; top: 30px;">
+        <a class="menu_icon" href="signup.html"><img
+                src="https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_1280.png" width="35"
+                height="35" /></a>
+        <a class="menu_icon" href="basket.html?item_id=1"><img
+                src="https://cdn.pixabay.com/photo/2014/05/21/13/25/shopping-cart-349544_1280.png" width="35"
+                height="35" /></a>
+    </div>
+    <a href="jihwan_shopping_mall.html">
+        <h1 style="text-align:center;">Jihwan&apos;s Mall</h1>
+    </a><br />
+
+    <div class="container-fluid" style="width:100%; text-align:center;">
+        <a class="menu_text" href="view_item_list.html">상품 보기</a>
+        <a class="menu_text" href="basket.html?item_id=1">장바구니</a>
+        <a class="menu_text" href="signup.html">회원가입</a>
+    </div><br /><br />
+    <hr /><br />
+
+    <div class="container-fluid" style="width:100%; text-align:center;">
+        <table class="table" border="0">
+            <tr>
+                <td width="25%">
+                    <a href="view_item.html?item_id=1">
+                        <img class="item_image"
+                            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_MY?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1632948891000" />
+                    </a>
+                </td>
+                <td width="25%">
+                    <a href="view_item.html?item_id=2">
+                        <img class="item_image" src="https://cf.shopee.com.my/file/bdbe3302367ef8e977fbe9b04934a197" />
+                    </a>
+                </td>
+                <td width="25%">
+                    <a href="view_item.html?item_id=3">
+                        <img class="item_image"
+                            src="https://www.notebookcheck.net/uploads/tx_nbc2/LD0005429249_2_02.jpg" />
+                    </a>
+                </td>
+                <td width="25%">
+                    <a href="view_item.html?item_id=4">
+                        <img class="item_image" src="https://m.media-amazon.com/images/I/51jxS+lbzvL._SX450_.jpg" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="product_title">맥북</p>
+                    <p class="product_price">1,856,000원</p>
+                </td>
+                <td>
+                    <p class="product_title">갤럭시북</p>
+                    <p class="product_price">1,500,000원</p>
+                </td>
+                <td>
+                    <p class="product_title">젠북</p>
+                    <p class="product_price">1,250,000원</p>
+                </td>
+                <td>
+                    <p class="product_title">씽크패드</p>
+                    <p class="product_price">899,000원</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer class="container-fluid"
+        style="margin-top:200px; width:100%; background-color: grey; padding-top: 30px; padding-bottom:30px; text-align:center; color:white;">
+        Jihwan&apos;s Mall &copy; Copyright 2022&nbsp;
+    </footer>
+</body>
+
+</html>
